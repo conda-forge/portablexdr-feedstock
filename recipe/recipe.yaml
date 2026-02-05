@@ -35,7 +35,7 @@ requirements:
     - meson
     - ninja
   run_exports:
-    - ${{ pin_subpackage('portablexdr', upper="x.x.x") }}
+    - ${{ pin_subpackage('portablexdr', upper_bound="x.x.x") }}
 
 tests:
   - package_contents:
