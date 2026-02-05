@@ -24,7 +24,7 @@ build:
   script:
     - if: win
       then: |
-        meson setup build %MESON_ARGS% || exit /b 1
+        meson setup build --prefix %LIBRARY_PREFIX% -Dbuildtype=release || exit /b 1
         meson install -C build || exit /b 1
       else: |
         meson setup build ${MESON_ARGS}
